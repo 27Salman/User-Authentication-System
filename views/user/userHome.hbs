@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/userHome.css">
+
+<div id="particles-js" class="snow"></div>
+
+<main>
+  <div class="left-side"></div>
+
+  <div class="right-side">
+    <div class="welcome-card">
+      <h2>Welcome to the Home Page!</h2>
+      <p>You have successfully logged in. Enjoy exploring the application.</p>
+      <a href="/user/logout">
+          <button class="logout-btn" onclick="window.location.href='/user/logout'">Logout</button>
+      </a>
+      
+    </div>
+  </div>
+</main>
+
+<script>
+  function logout() {
+  window.location.href = "/user/logout";
+}
+
+</script>

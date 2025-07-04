@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="/userlogin.css">
+
+    <div id="particles-js" class="snow"></div>
+
+    <main>
+       <div class="left-side"></div>
+      
+      <div class="right-side">
+
+
+        <form method="post" action="/admin/login">
+          <input type="text" id="message" value="{{{message}}}" name="message" hidden>
+
+        <div class="btn-group">
+          <button class="btn">
+            <img class="logo" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d1c98974-c62d-4071-8bd2-ab859fc5f4e9" alt="" />
+            <span>Sign in with Google</span>
+          </button>
+          <button class="btn">
+            <img class="logo" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/59c1561b-8152-4d05-b617-0680a7629a0e" alt="" />
+            <span>Sign in with Apple</span>
+          </button>
+        </div>
+
+        <div class="or">OR</div>
+        <input type="text" id="message" value="{{{message}}}" name="message" hidden>
+        <label for="username">Username</label>
+        <input id="username" name="email" type="text" placeholder="Email or Phone"  required />
+
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          required />
+
+        <button type="submit" class="login-btn">Sign Up</button>
+      </form>
+      </div>
+      
+    </main>
+<script>
+
+
+const message = document.getElementById('message').value;
+
+if(message){
+  swal(message);
+  message = null;
+}
+
+</script>
