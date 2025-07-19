@@ -56,6 +56,15 @@ main {
   padding: 60px;
 }
 
+
+
+.success-msg {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
 /* Button Group */
 
 .btn-group {

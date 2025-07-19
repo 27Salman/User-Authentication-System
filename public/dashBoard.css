@@ -29,6 +29,22 @@ body {
     background: #d32f2f;
 }
 
+.success-msg {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.error-msg {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+
+
+
 .user-management {
     margin-top: 30px;
     background: #ffffff;
@@ -42,7 +58,7 @@ body {
     color: #0d47a1;
 }
 
-.add-user-btn {
+.add-user-btn,.search-btn {
     background: #1976d2;
     color: #fff;
     border: none;

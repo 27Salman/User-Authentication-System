@@ -1,9 +1,13 @@
 <link rel="stylesheet" href="/userlogin.css">
 
     <main>
-       <div class="left-side"></div>
+      <div class="left-side"></div>
       
       <div class="right-side">
+        {{#if message}}
+          <p class="success-msg">{{message}}</p>
+        {{/if}}
+
         <form method="post" action="/user/login">
           <input type="text" id="message" value="{{{message}}}" name="message" hidden>
 
@@ -31,10 +35,10 @@
           name="password"
           required />
 
-        <button type="submit" class="login-btn">Sign Up</button>
+        <button type="submit" class="login-btn">Sign In</button>
         <div class="links">
           <a href="#">Forgot password?</a>
-          <a href="#">Do not have an account?</a>
+          <a href="/user/register">Do not have an account?</a>
         </div>
       </form>
       </div>

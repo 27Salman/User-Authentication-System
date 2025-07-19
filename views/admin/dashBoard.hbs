@@ -9,6 +9,21 @@
   <h2>User Management</h2>
   <button class="add-user-btn" onclick="openAddUserModal()">Add User</button>
 
+<form method="get" action="/admin/dashBoard" style="margin-bottom: 20px;">
+  <input type="text" name="search" value="{{search}}" placeholder="Search by email" />
+  <button type="submit" class="search-btn">Search</button>
+</form>
+
+{{#if success}}
+  <p class="success-msg">{{success}}</p>
+{{/if}}
+
+{{#if error}}
+  <p class="error-msg">{{error}}</p>
+{{/if}}
+
+
+
   <table>
     <thead>
       <tr>
@@ -20,7 +35,7 @@
     <tbody>
       {{#each users}}
       <tr>
-        <td>{{@index}}</td>
+        <td>{{inc @index}}</td>
         <td>{{this.email}}</td>
         <td>
           <button class="edit-btn" onclick="openEditUserModal('{{this._id}}', '{{this.email}}')">Edit</button>
@@ -73,6 +88,12 @@
 function logout() {
   window.location.href = "/admin/logout";
 }
+
+setTimeout(() => {
+  const alerts = document.querySelectorAll('.alert');
+  alerts.forEach(alert => alert.style.display = 'none');
+}, 3000);
+
 
 // Open & Close Add User Modal
 function openAddUserModal() {

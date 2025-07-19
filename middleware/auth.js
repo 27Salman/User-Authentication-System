@@ -1,16 +1,16 @@
 const checkSession = (req,res,next)=>{
     if(req.session.user){
-        next()
+        next();
     }else{
-        res.redirect('/user/login')
+        res.redirect('/user/login');
     }
 }
 
 const isLogin = (req,res,next)=>{
     if(req.session.user){
-        res.redirect('/user/home')
+        res.redirect('/user/userHome')
     }else{
-        next()
+        next();
     }
 }
 module.exports = {checkSession, isLogin}

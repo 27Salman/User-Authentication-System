@@ -9,7 +9,7 @@ router.post('/login',userController.login)
 router.get('/register',auth.isLogin,userController.loadRegister)
 router.post('/register',userController.registerUser)
 
-router.get('/home',auth.checkSession,userController.loadHome);
+router.get('/userHome',auth.checkSession,userController.loadHome);
 router.get('/logout',auth.checkSession,userController.logout);
 
 
